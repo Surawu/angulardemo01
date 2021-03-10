@@ -1,3 +1,5 @@
+;
+import { HeaderComponent } from './components/header/header.component';
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
@@ -7,7 +9,7 @@ import { HelloComponent } from "./hello.component";
 
 @NgModule({
   imports: [BrowserModule, FormsModule],
-  declarations: [AppComponent, HelloComponent],
+  declarations: [AppComponent, HelloComponent, HeaderComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
