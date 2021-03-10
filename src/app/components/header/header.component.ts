@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   public source: any = "1";
 
   public inputValue: string = "hi";
+  public flag: boolean = true;
 
   constructor() {
     this.list.push("a");

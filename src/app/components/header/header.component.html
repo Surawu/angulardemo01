@@ -39,4 +39,8 @@
 <br/>
 
 <p>{{inputValue}}</p>
-<input [(ngModel)]="inputValue"/>
+<input type="text" [(ngModel)]="inputValue"/>
+
+<div [ngClass]="{'red': flag, 'blue': !flag}">
+这是一个div
+</div>
