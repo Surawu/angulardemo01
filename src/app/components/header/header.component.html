@@ -41,6 +41,23 @@
 <p>{{inputValue}}</p>
 <input type="text" [(ngModel)]="inputValue"/>
 
+
+<ul>
+  <li *ngFor="let item of userList; let i = index;">
+    {{item.username}} --- {{item.age}}
+  </li>
+</ul>
+
 <div [ngClass]="{'red': flag, 'blue': !flag}">
-这是一个div
+  这是一个div
+</div>
+
+<button type="button" class="big-font" [ngClass]="classStyler">Submit</button>
+
+<div>
+  <label for="one">Terms of Service</label>
+  <input #one id="one" type="checkbox" (change)="updateTos(one.checked)"/>
+
+  <label for="two">Send Usage Information</label>
+  <input #two id="two" type="checkbox" (change)="updateUsage(two.checked)">
 </div>

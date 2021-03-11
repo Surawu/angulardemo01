@@ -16,6 +16,54 @@ export class HeaderComponent implements OnInit {
   public inputValue: string = "hi";
   public flag: boolean = true;
 
+  public classStyler: any;
+
+  public userList: any[] = [
+    {
+      username: "zhangsan",
+      age: 20
+    },
+    {
+      username: "lisi",
+      age: 21
+    },
+    {
+      username: "wangwu",
+      age: 25
+    }
+  ];
+
+  public cars: any[] = [
+    {
+      cate: "BWM",
+      list: [
+        {
+          title: "x1"
+        },
+        {
+          title: "x2"
+        },
+        {
+          title: "x3"
+        }
+      ]
+    },
+    {
+      cate: "AuDi",
+      list: [
+        {
+          title: "Q1"
+        },
+        {
+          title: "Q2"
+        },
+        {
+          title: "Q3"
+        }
+      ]
+    }
+  ];
+
   constructor() {
     this.list.push("a");
     this.list.push("b");
@@ -23,7 +71,14 @@ export class HeaderComponent implements OnInit {
     this.list.push("d");
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.classStyler = {
+      warning: false,
+      info: false,
+      error: !this.flag,
+      success: this.flag
+    };
+  }
 
   getData() {
     console.log(this.title);
@@ -35,5 +90,13 @@ export class HeaderComponent implements OnInit {
 
   keyUpFn(e) {
     console.log(e.key);
+  }
+
+  updateTos(e) {
+    console.log(e);
+  }
+
+  updateUsage(e) {
+    console.log(e);
   }
 }
